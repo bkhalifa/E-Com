@@ -1,0 +1,55 @@
+<main role="main" class="container">
+    <h1 class="mt-5">&nbsp;</h1>
+    <p class="lead">&nbsp;</p>
+
+  </main>
+
+
+
+  <div>
+ <table class="table">
+   <thead>
+    <th>
+      CategoryId
+    </th>
+    <th>
+      Model Number
+    </th>
+    <th>
+      Model Name
+    </th>
+    <th>
+      product  Image
+    </th>
+    <th>
+      unit Cost
+    </th>
+    <th>
+      Description
+    </th>
+   </thead>
+   <tbody>
+     <tr>
+       <td>
+        {{produit.categoryId}} 
+       </td>
+       <td>
+        {{produit.modelNumber}} 
+       </td>
+       <td>
+        {{produit.modelName}} 
+       </td>
+       <td>
+        {{produit.productImage}} 
+       </td>
+       <td>
+        {{produit.unitCost}} 
+       </td>
+       <td>
+        {{produit.description}} 
+       </td>
+     </tr>
+   </tbody>
+ </table>
+ <a class="btn btn-success" (click)="goBack()" >retour</a>
+  </div>
