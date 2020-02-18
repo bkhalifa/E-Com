@@ -1,13 +1,9 @@
 
-<main role="main" class="container">
-    <h1 class="mt-5"><h2> </h2></h1>
-    <p class="lead">&nbsp;</p>
 
-  </main>
 <div>
+  <div>
     Filter par : <input type="text" [(ngModel)]="searchTerm" />
 </div>
-<div>
     <table class="table">
         <thead>
           <tr>
@@ -17,8 +13,8 @@
             <th>Prix </th>
             <th> Description</th>
           </tr>
-      
-      
+
+
         </thead>
         <tbody>
           <tr *ngFor="let pr of produits | productFilter:searchTerm ">
@@ -30,5 +26,5 @@
           </tr>
         </tbody>
       </table>
-      
+
 </div>
