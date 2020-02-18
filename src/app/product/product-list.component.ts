@@ -10,11 +10,11 @@ import { Product } from "./product";
 })
 
 export class ProductListComponent implements OnInit{
-    
+
     constructor(private _productService: ProductService){}
-     
+
     produits :Product[];
- 
+
     ngOnInit(): void {
       this._productService.GetProduits()
       .subscribe(
@@ -23,6 +23,9 @@ export class ProductListComponent implements OnInit{
       );
       console.log(this.produits);
     }
- 
+
+    addToDoProduit(produitToAdd:Product){
+      console.log(`produit ${produitToAdd.description} a été ajouté`);
+    }
 
 }

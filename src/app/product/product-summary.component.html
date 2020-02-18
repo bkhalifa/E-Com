@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      <a [routerLink]="['/produits',produit.productId]">     {{produit.modelNumber}}  </a>
+    </h6>
+    <p class="card-text">{{produit.description}}</p>
+     <p> Prix : {{produit.unitCost}} €</p>
+ <label class="laber-control" > Acheter </label>
+ <input type='checkbox' class="checkbox-inline" (change)="addToPanier($event.target.checked, produit.productId)" />
+  </div>
+</div>
