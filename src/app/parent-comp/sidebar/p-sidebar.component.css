@@ -1,0 +1,16 @@
+:host {
+  display: inline-block;
+  background: #ccc;
+  padding: 5px;
+  cursor: pointer;
+}
+
+:host:hover {
+  background: rgb(114, 99, 99);
+}
+a{
+  text-decoration: underline;
+}
+a:hover{
+  color: blue;
+}

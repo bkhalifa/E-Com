@@ -9,6 +9,7 @@ import { HeroParentCompoent } from "./hero/hero-parent.component";
 import { HostListenerComponent } from "./hostlistener/host-listener.component";
 import { ComComponent } from "./com/com.component";
 import { AppCategoryComponent } from "./category/app-category/app-category.component";
+import { ParentComComponent } from "./parent-comp/parentcom.component";
 
 
 
@@ -18,6 +19,7 @@ const routes :any = [
     {path:'produits/:productId', component:ProductDetailComponent} ,
     {path:'demo', component:HeroParentCompoent} ,
     {path:'comm-component', component:ComComponent} ,
+    {path:'comm-parent-component', component:ParentComComponent} ,
     {path:'host-listner', component:HostListenerComponent} ,
     { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     {path:'**', component:PageNotFound}

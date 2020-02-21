@@ -31,8 +31,6 @@ export class CategoryComponent implements OnInit {
         res => this.categories = res,
         err => console.log(err.status)
       )
-
-
   }
 
   GetProductCategries(categoryId: number) {

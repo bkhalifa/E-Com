@@ -24,4 +24,8 @@ constructor(private el: ElementRef, private renderer: Renderer){}
     let part = this.el.nativeElement.querySelector('.card-text');
     this.renderer.setElementStyle(part, 'color', 'green');
   }
+  @HostListener('mouseout') onMouseOut() {
+    let part = this.el.nativeElement.querySelector('.card-text');
+    this.renderer.setElementStyle(part, 'color', 'black');
+  }
 }

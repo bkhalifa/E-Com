@@ -12,6 +12,7 @@ import { CategoryModule } from "./category/category.module";
 import { HeroModule } from './hero/hero.module';
 import { ComModule } from './com/com.module';
 import { HostModule } from './hostlistener/host.module';
+import { ParentComModule } from './parent-comp/parentcom.module';
 
 
 
@@ -24,6 +25,7 @@ import { HostModule } from './hostlistener/host.module';
     CategoryModule,
     HeroModule,
     ComModule,
+    ParentComModule,
     HostModule,
     AppRouterModule,
   ],
