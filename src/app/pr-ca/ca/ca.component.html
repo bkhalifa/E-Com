@@ -1,0 +1,14 @@
+<div class="container">
+  <p>
+  category component
+   </p>
+
+<ul >
+  <li *ngFor='let c of categories'>
+  <a (click)="GetProduits(c.categoryId)" > {{c.categoryName}} </a>
+  </li>
+</ul>
+</div>
+
+
+

@@ -10,6 +10,7 @@ import { HostListenerComponent } from "./hostlistener/host-listener.component";
 import { ComComponent } from "./com/com.component";
 import { AppCategoryComponent } from "./category/app-category/app-category.component";
 import { ParentComComponent } from "./parent-comp/parentcom.component";
+import { prcaComponent } from "./pr-ca/pr-ca.component";
 
 
 
@@ -20,6 +21,7 @@ const routes :any = [
     {path:'demo', component:HeroParentCompoent} ,
     {path:'comm-component', component:ComComponent} ,
     {path:'comm-parent-component', component:ParentComComponent} ,
+    {path:'pr-ca', component:prcaComponent} ,
     {path:'host-listner', component:HostListenerComponent} ,
     { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     {path:'**', component:PageNotFound}

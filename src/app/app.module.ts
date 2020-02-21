@@ -13,6 +13,7 @@ import { HeroModule } from './hero/hero.module';
 import { ComModule } from './com/com.module';
 import { HostModule } from './hostlistener/host.module';
 import { ParentComModule } from './parent-comp/parentcom.module';
+import { PrcaModule } from './pr-ca/pr-ca.module';
 
 
 
@@ -26,6 +27,7 @@ import { ParentComModule } from './parent-comp/parentcom.module';
     HeroModule,
     ComModule,
     ParentComModule,
+    PrcaModule,
     HostModule,
     AppRouterModule,
   ],
