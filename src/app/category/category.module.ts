@@ -6,13 +6,15 @@ import { CommonModule } from "@angular/common";
 import { ProductCategoryComponent } from "./product-category.component";
 import { CategFilterPipe } from "./category-filter.pipe";
 import { FormsModule } from "@angular/forms";
+import { AppCategoryComponent } from "./app-category/app-category.component";
+
 
 
 
 @NgModule({
 imports:[CommonModule, FormsModule],
-declarations:[CategoryComponent, ProductCategoryComponent, CategFilterPipe],
-exports:[CategoryComponent, ProductCategoryComponent],
+declarations:[AppCategoryComponent,CategoryComponent, ProductCategoryComponent, CategFilterPipe],
+exports:[AppCategoryComponent,CategoryComponent, ProductCategoryComponent],
 providers:[CategoryService]
 })
 export class CategoryModule {}

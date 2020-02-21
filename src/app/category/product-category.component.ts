@@ -15,12 +15,14 @@ export class ProductCategoryComponent {
 
   produits : Product[];
   constructor(private _categorySvc :CategoryService){}
-  @Input() sideBar: CategoryComponent;
+
   searchTerm :string='';
    id :number;
 
+
+
   ngOnInit(): void {
-     this._categorySvc.GetProductategries(0)
+     this._categorySvc.GetProductategries(14)
       .subscribe(
         res => this.produits = res,
         err=> console.log(err.status)

@@ -8,11 +8,12 @@ import { CategoryComponent } from "./category/category.component";
 import { HeroParentCompoent } from "./hero/hero-parent.component";
 import { HostListenerComponent } from "./hostlistener/host-listener.component";
 import { ComComponent } from "./com/com.component";
+import { AppCategoryComponent } from "./category/app-category/app-category.component";
 
 
 
 const routes :any = [
-   { path: 'accueil', component: CategoryComponent },
+   { path: 'accueil', component: AppCategoryComponent },
     { path: 'produits', component: ProductListComponent },
     {path:'produits/:productId', component:ProductDetailComponent} ,
     {path:'demo', component:HeroParentCompoent} ,

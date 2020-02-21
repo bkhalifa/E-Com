@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { CategoryService } from "./category.service";
 import { ICategory } from "./category";
 
@@ -19,10 +19,11 @@ export class CategoryComponent implements OnInit {
 
 
   categories: ICategory[];
-  produits: Product[];
-  categoryId:number;
 
-  @Output()  notifyProduct  = new EventEmitter<Product>();
+  categoryId:number = 14;
+
+@Input() categ : ProductCategoryComponent;
+
 
   ngOnInit(): void {
     this._categorySvc.GetCategries()
@@ -37,7 +38,7 @@ export class CategoryComponent implements OnInit {
   GetProductCategries(categoryId: number) {
     this.categoryId=categoryId;
     this._categorySvc.GetProductategries(categoryId).subscribe(
-      res => this.produits = res,
+     res  => this.categ.produits = res,
       err => console.log(err.status)
     )
   }
