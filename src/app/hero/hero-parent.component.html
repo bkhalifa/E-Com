@@ -1,0 +1,13 @@
+
+
+<h1> Parent component</h1>
+<ul *ngFor = "let h of HEROES">
+<li> Id :  {{h.id}}  | Name : {{h.name}} </li>
+<hero-child [hr]="h" (NotifyParent)="displatHero($event)"></hero-child>
+  </ul>
+
+ <div>
+<b>{{DisplayName}}</b>
+ </div>
+
+

@@ -1,0 +1,26 @@
+
+<div class="main">
+ <div>
+
+  <input type="text" [(ngModel)]="searchTerm" class="control-form" placeholder="Filtre"  />
+  <div class="row">
+    &nbsp;
+  </div>
+
+</div>
+
+  <div *ngFor="let pr of produits | produitFilter:searchTerm">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          <a  href="#">     {{pr.modelNumber}}  </a>
+        </h6>
+        <p class="card-text">{{pr.description}}</p>
+         <p> Prix : {{pr.unitCost}} €</p>
+     <label class="laber-control" > Acheter </label>
+     <input type='checkbox' class="checkbox-inline" (change)="addToPanier($event.target.checked, pr.productId)" />
+      </div>
+    </div>
+
+</div>

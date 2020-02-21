@@ -1,0 +1,15 @@
+
+
+
+<div class="sidenav" >
+
+  <div class="list-group list-group-flush" *ngFor=" let c of categories">
+    <a  class="list-group-item list-group-item-action bg-light"
+     (click)="GetProductCategries(c.categoryId)">{{c.categoryName}}</a>
+
+  </div>
+
+</div>
+<product-category></product-category>
+
+
