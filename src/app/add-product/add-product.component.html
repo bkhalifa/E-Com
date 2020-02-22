@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>Ajouter Produit </h2>
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading"></div>
+      <div class="panel-body">
+
+        <form #form="ngForm" (submit)="PostProduit(form)" >
+
+         <list-category (NotifyProduct)="OnChange($event)"></list-category>
+
+          <div class="form-group">
+            <label for="ModelNumber">Model Number</label>
+            <input type="email" class="form-control" id="ModelNumber"  name="modelNumber" #modelNumer="ngModel" ngModel >
+          </div>
+          <div class="form-group">
+            <label for="ModelName">Model Name</label>
+            <input type="text" class="form-control" id="ModelName" name="modelName" #modelName="ngModel" ngModel >
+          </div>
+
+          <div class="form-group">
+            <label for="unitcost">unit Cost </label>
+            <input type="text" class="form-control" id="unitcost" name="uniCost" #unitCost="ngModel" ngModel >
+          </div>
+
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="3" name="description" #description="ngModel" ngModel> </textarea>
+          </div>
+
+            <button type="submit"  class="btn btn-success" [disabled]="form.invalid">envoyer</button>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+Form : {{form.value | json }} <br>

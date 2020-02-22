@@ -1,0 +1,10 @@
+<div class="form-group">
+
+  <label for="Category">Category</label>
+  <select  class="form-control" id="Category" (change)="Onchange($event.target)" >
+    <option *ngFor="let c of categories"value= {{c.categoryId}}  name="category" >
+      {{c.categoryName}}
+    </option>
+
+  </select>
+</div>

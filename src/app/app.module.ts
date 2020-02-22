@@ -14,6 +14,7 @@ import { ComModule } from './com/com.module';
 import { HostModule } from './hostlistener/host.module';
 import { ParentComModule } from './parent-comp/parentcom.module';
 import { PrcaModule } from './pr-ca/pr-ca.module';
+import { AddProductModule } from './add-product/add-product.module';
 
 
 
@@ -28,6 +29,7 @@ import { PrcaModule } from './pr-ca/pr-ca.module';
     ComModule,
     ParentComModule,
     PrcaModule,
+    AddProductModule,
     HostModule,
     AppRouterModule,
   ],
