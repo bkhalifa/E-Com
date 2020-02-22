@@ -2,6 +2,7 @@ import { Component, HostListener, ElementRef, Renderer } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { ProductService } from "../product/product.service";
 import { Product } from "../product/product";
+import { empty } from "rxjs/Observer";
 
 @Component ({
   selector:'add-product',
@@ -23,9 +24,8 @@ pr:any;
      pr.unitCost = form.value.uniCost;
      pr.description = form.value.description;
      pr.categoryId = this.categoryId;
-
      this.productSvc.PostProduct(pr);
-
+      form.resetForm();
   }
 
   OnChange(categoryId: number){

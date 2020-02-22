@@ -12,18 +12,21 @@
 
           <div class="form-group">
             <label for="ModelNumber">Model Number</label>
-            <input type="email" class="form-control" id="ModelNumber"  name="modelNumber" #modelNumer="ngModel" ngModel >
+            <input type="email" class="form-control" id="ModelNumber" required name="modelNumber" #modelNumer="ngModel" ngModel >
+            <div style="color: red;"  *ngIf="modelNumer.invalid && modelNumer.touched"> model number manquant</div>
           </div>
+
           <div class="form-group">
             <label for="ModelName">Model Name</label>
-            <input type="text" class="form-control" id="ModelName" name="modelName" #modelName="ngModel" ngModel >
+            <input type="text" class="form-control" required id="ModelName" name="modelName" #modelName="ngModel" ngModel >
+            <div style="color: red;"  *ngIf="modelName.invalid && modelName.touched"> model Name  manquant</div>
           </div>
 
           <div class="form-group">
             <label for="unitcost">unit Cost </label>
-            <input type="text" class="form-control" id="unitcost" name="uniCost" #unitCost="ngModel" ngModel >
+            <input type="number" class="form-control" id="unitcost"  name="uniCost" #unitCost="ngModel" required ngModel step="0.01" >
+            <div style="color: red;"  *ngIf="unitCost.invalid && unitCost.touched"> cout  manquant</div>
           </div>
-
 
           <div class="form-group">
             <label for="description">Description</label>
