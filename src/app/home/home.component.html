@@ -4,4 +4,33 @@
 <div>  Home page : bienvenue sur ce site e-commerce</div>
 
 <hr>
+<div>
+  <button (click)="toggle()" *ngIf="open"> Fermer </button>
+  <button (click)="toggle()" *ngIf="!open"> Ouvrir </button>
+  <div [@toggleElement] = "Elementstate">
+
+    Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour
+    calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que   la mise en page est achevée.
+     Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum
+
+  </div>
+
+
+
+  <h3> Citations</h3>
+<div class="col-md-6">
+
+   <div [@animationCitation] = "animationState">
+         {{quote.text}}<br>
+    <em>{{quote.author}}</em>
+
+    </div>
+
+  <div>
+    <a class ='btn btn-primary'(click)="getPrev()"> prev</a>
+    <a class ='btn btn-primary' (click)="getNext()"> next</a>
+
+  </div>
+
+</div>
 

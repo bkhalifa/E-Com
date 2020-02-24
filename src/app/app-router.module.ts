@@ -12,10 +12,12 @@ import { AppCategoryComponent } from "./category/app-category/app-category.compo
 import { ParentComComponent } from "./parent-comp/parentcom.component";
 import { prcaComponent } from "./pr-ca/pr-ca.component";
 import { AddProductComponent } from "./add-product/add-product.component";
+import { HomeComponent } from "./home/home.component";
 
 
 
 const routes :any = [
+  { path: 'animation', component: HomeComponent },
    { path: 'accueil', component: AppCategoryComponent },
     { path: 'produits', component: ProductListComponent },
     {path:'produits/:productId', component:ProductDetailComponent} ,

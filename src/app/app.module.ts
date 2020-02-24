@@ -15,8 +15,7 @@ import { HostModule } from './hostlistener/host.module';
 import { ParentComModule } from './parent-comp/parentcom.module';
 import { PrcaModule } from './pr-ca/pr-ca.module';
 import { AddProductModule } from './add-product/add-product.module';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -31,6 +30,8 @@ import { AddProductModule } from './add-product/add-product.module';
     PrcaModule,
     AddProductModule,
     HostModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     AppRouterModule,
   ],
   declarations: [AppComponent, PageNotFound],
