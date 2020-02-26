@@ -6,7 +6,7 @@
       <div class="panel-heading"></div>
       <div class="panel-body">
 
-        <form #form="ngForm" (submit)="PostProduit(form)" >
+        <form #form="ngForm" (submit)="PostProduit(form)"  >
 
          <list-category (NotifyProduct)="OnChange($event)"></list-category>
 
@@ -14,6 +14,12 @@
             <label for="ModelNumber">Model Number</label>
             <input type="email" class="form-control" id="ModelNumber" required name="modelNumber" #modelNumer="ngModel" ngModel >
             <div style="color: red;"  *ngIf="modelNumer.invalid && modelNumer.touched"> model number manquant</div>
+          </div>
+
+          <div class="form-group">
+            <label for="ImageModel">Image</label>
+            <input type="file" (change)="onFileChanged($event)" name="ImageModel" #modelNumer="ngModel" ngModel  multiple />
+
           </div>
 
           <div class="form-group">
@@ -28,10 +34,12 @@
             <div style="color: red;"  *ngIf="unitCost.invalid && unitCost.touched"> cout  manquant</div>
           </div>
 
+
           <div class="form-group">
             <label for="description">Description</label>
             <textarea class="form-control" id="description" rows="3" name="description" #description="ngModel" ngModel> </textarea>
           </div>
+
 
             <button type="submit"  class="btn btn-success" [disabled]="form.invalid">envoyer</button>
 

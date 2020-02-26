@@ -16,6 +16,8 @@ import { ParentComModule } from './parent-comp/parentcom.module';
 import { PrcaModule } from './pr-ca/pr-ca.module';
 import { AddProductModule } from './add-product/add-product.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { APP_BASE_HREF } from '@angular/common';
+
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRouterModule,
   ],
   declarations: [AppComponent, PageNotFound],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [{provide: APP_BASE_HREF, useValue: '/'}]
 })
 export class AppModule { }

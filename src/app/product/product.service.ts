@@ -1,12 +1,13 @@
 
 import { Injectable } from "@angular/core";
-import {Http} from '@angular/http';
+import {Http,Headers} from '@angular/http';
 
 
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import { Product } from "./product";
+import { HttpHeaders, HttpParams } from "@angular/common/http";
 
 
 @Injectable()
@@ -33,9 +34,18 @@ export class ProductService{
       .map(categories => categories.json())
       }
 
-    PostProduct(produit:Product){
-      console.log(produit);
-       this._http.post('http://localhost:8081/api/Product/postproduct',produit)
+
+      GetValues() {
+        return this._http.get('http://localhost:8656/api/Values')
+
+        .map(values => values.json())
+        }
+
+
+
+    PostProduct(model:any){
+
+       this._http.post('http://localhost:8656/api/Product/postproduct',model)
        .subscribe(
         res => {
           console.log(res);
@@ -45,4 +55,7 @@ export class ProductService{
         }
       );
     }
+
+
+
 }

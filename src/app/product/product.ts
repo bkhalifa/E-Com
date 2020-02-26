@@ -6,6 +6,4 @@ export class Product {
     productImage: string;
     modelNumber: string;
     unitCost: number;
-  
   }
-  

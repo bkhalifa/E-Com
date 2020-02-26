@@ -16,6 +16,7 @@ import { HomeComponent } from "./home/home.component";
 
 
 
+
 const routes :any = [
   { path: 'animation', component: HomeComponent },
    { path: 'accueil', component: AppCategoryComponent },

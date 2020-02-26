@@ -15,6 +15,7 @@ export class ProductCategoryComponent {
 
   produits : Product[];
   constructor(private _categorySvc :CategoryService){}
+ defaultImg :string ="/resource/99.png";
 
   searchTerm :string='';
    id :number;
