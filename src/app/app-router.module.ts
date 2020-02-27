@@ -13,6 +13,8 @@ import { ParentComComponent } from "./parent-comp/parentcom.component";
 import { prcaComponent } from "./pr-ca/pr-ca.component";
 import { AddProductComponent } from "./add-product/add-product.component";
 import { HomeComponent } from "./home/home.component";
+import { ObserverModule } from "./observer/observer.module";
+import { ObserverComponent } from "./observer/observer.component";
 
 
 
@@ -28,6 +30,7 @@ const routes :any = [
     {path:'pr-ca', component:prcaComponent} ,
     { path: 'add-produit', component: AddProductComponent },
     {path:'host-listner', component:HostListenerComponent} ,
+    {path:'observer',component:ObserverComponent},
     { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     {path:'**', component:PageNotFound}
     ];

@@ -52,14 +52,7 @@
           [routerLink]="['/add-produit']">add product</a>
       </li>
 
-      <li class="nav-item">
-        <a class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block"
-          [routerLink]="['/host-listner']">Host - Listener</a>
-      </li>
-      <li class="nav-item">
-        <a class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block"
-          [routerLink]="['/upload']">Upload </a>
-      </li>
+
       <li class="nav-item dropdown">
         <a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="false">
           <i class="icon-git-compare"></i>
@@ -331,12 +324,25 @@
       <li class="nav-item dropdown dropdown-user">
         <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
           <img src="global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2" height="34" alt="">
-          <span>Victoria</span>
+          <span>Demo</span>
         </a>
 
         <div class="dropdown-menu dropdown-menu-right">
-          <a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
-          <a href="#" class="dropdown-item"><i class="icon-coins"></i> My balance</a>
+          <!-- <a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a> -->
+
+          <a class="dropdown-item"
+          [routerLink]="['/observer']">Observer </a>
+
+          <a class="dropdown-item"
+          [routerLink]="['/host-listner']">Host - Listener</a>
+
+            <a class="dropdown-item"
+              [routerLink]="['/host-listner']">Host - Listener</a>
+
+
+            <a class="dropdown-item"
+              [routerLink]="['/upload']">Upload </a>
+
           <a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>

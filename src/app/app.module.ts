@@ -17,6 +17,7 @@ import { PrcaModule } from './pr-ca/pr-ca.module';
 import { AddProductModule } from './add-product/add-product.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { APP_BASE_HREF } from '@angular/common';
+import { ObserverModule } from './observer/observer.module';
 
 
 
@@ -32,6 +33,7 @@ import { APP_BASE_HREF } from '@angular/common';
     PrcaModule,
     AddProductModule,
     HostModule,
+    ObserverModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRouterModule,

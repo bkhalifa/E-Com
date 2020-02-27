@@ -17,6 +17,11 @@ export class ProductListComponent implements OnInit{
 
     ngOnInit(): void {
       this._productService.GetProduits()
+      // .subscribe({
+      //   next(res){console.log(res);},
+      //   error(err){console.log(err)},
+      //   complete(){console.log('completed !')}
+      // })
       .subscribe(
           res => this.produits = res,
           err => console.log(err.status)
