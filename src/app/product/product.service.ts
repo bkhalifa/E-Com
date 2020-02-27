@@ -45,7 +45,7 @@ export class ProductService{
 
     PostProduct(model:any){
 
-       this._http.post('http://localhost:8656/api/Product/postproduct',model)
+       this._http.post('http://localhost:8081/api/Product/postproduct',model)
        .subscribe(
         res => {
           console.log(res);

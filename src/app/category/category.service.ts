@@ -25,5 +25,16 @@ GetProductategries(categoryId?: number) {
   }
 
 
+  DeleteProduct(prodcutId:any){
 
+    this._http.delete('http://localhost:8656/api/Product/deleteproduct?prodcutId='+ prodcutId)
+    .subscribe(
+     res => {
+       console.log(res);
+     },
+     err => {
+       console.log("Error occured");
+     }
+   );
+ }
 }
