@@ -31,10 +31,11 @@ export class ProductCategoryComponent {
   }
 
   deleteProduct(productId:number){
-
-
     this._categorySvc.DeleteProduct(productId);
-
+    this.produits.forEach( (item, index) => {
+      if(item.productId === productId)
+      this.produits.splice(index,1);
+    });
   }
 
 
