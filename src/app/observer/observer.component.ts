@@ -46,7 +46,7 @@ constructor(private el: ElementRef, private renderer: Renderer){}
       error : (err:any) => console.log(`error occured ${err}`),
       complete : () => console.log(`no more appels , go home`)
     };
-    let appleStream  = new Observable(appleObserver =>{
+    let appleStream  = new Observable((appleObserver:any) =>{
       appleObserver.next("apple 1");
       appleObserver.next('apple 2');
       appleObserver.complete();

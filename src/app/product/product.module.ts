@@ -8,6 +8,8 @@ import { RouterModule } from "@angular/router";
 import { ProductDetailComponent } from "./product-detail.component";
 import { productFilterPipe } from "./product-filter.pipe";
 import { ProductSummaryComponent } from "./product-summary.component";
+import { CollaseWellComponent } from "../shared/collapse-well.component";
+
 
 
 
@@ -15,8 +17,8 @@ import { ProductSummaryComponent } from "./product-summary.component";
 
 @NgModule({
    imports:[CommonModule, RouterModule, FormsModule],
-   declarations:[ProductListComponent, ProductDetailComponent, productFilterPipe, ProductSummaryComponent],
-   exports:[ProductListComponent],
+   declarations:[ProductListComponent, ProductDetailComponent, productFilterPipe, ProductSummaryComponent, CollaseWellComponent],
+   exports:[ProductListComponent, CollaseWellComponent],
    providers:[ProductService]
 
 })

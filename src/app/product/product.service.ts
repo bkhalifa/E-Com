@@ -8,18 +8,28 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import { Product } from "./product";
 import { HttpHeaders, HttpParams } from "@angular/common/http";
+import { of } from "rxjs/observable/of";
 
 
 @Injectable()
 export class ProductService{
+  private  products :Product[];
 
     constructor(private _http:Http){}
 
     GetProduits =() => {
+      if(this.products){
+        return of(this.products)
+      }
         return this._http.get('http://localhost:8081/api/product')
-        .do(x =>console.log(x))
-        .map(produits =>produits.json())
-    }
+        .pipe(
+          // tap(data => console.log(JSON.stringify(data))),
+          tap(data => this.products = data),
+          catchError(this.handleError)
+      );
+    //     .do(x =>console.log(x))
+    //     .map(produits =>produits.json())
+      }
 
     GetproduitDetail(productId:number){
 

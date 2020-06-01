@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ProductService } from "./product.service";
 import { Product } from "./product";
+import { ActivatedRoute } from "@angular/router";
 
 
 @Component({
@@ -11,22 +12,24 @@ import { Product } from "./product";
 
 export class ProductListComponent implements OnInit{
 
-    constructor(private _productService: ProductService){}
+    constructor(private route : ActivatedRoute){}
 
     produits :Product[];
 
     ngOnInit(): void {
-      this._productService.GetProduits()
-      // .subscribe({
-      //   next(res){console.log(res);},
-      //   error(err){console.log(err)},
-      //   complete(){console.log('completed !')}
-      // })
-      .subscribe(
-          res => this.produits = res,
-          err => console.log(err.status)
-      );
-      console.log(this.produits);
+       this.produits = this.route.snapshot.data["produits"]
+
+      // this._productService.GetProduits()
+      // // .subscribe({
+      // //   next(res){console.log(res);},
+      // //   error(err){console.log(err)},
+      // //   complete(){console.log('completed !')}
+      // // })
+      // .subscribe(
+      //     res => this.produits = res,
+      //     err => console.log(err.status)
+      // );
+      // console.log(this.produits);
     }
 
     addToDoProduit(produitToAdd:Product){

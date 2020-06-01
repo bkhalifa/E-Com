@@ -21,7 +21,8 @@ return this._http.get('http://localhost:8081/api/Category')
 GetProductategries(categoryId?: number) {
   return this._http.get('http://localhost:8081/api/Product/productCategory?categoryId='+categoryId)
     .do(x =>console.log(x.json()))
-   .map(produits => produits.json())
+    .map( produits => produits.json()
+     )
   }
 
 
@@ -36,5 +37,11 @@ GetProductategries(categoryId?: number) {
        console.log("Error occured");
      }
    );
+ }
+
+ GetByProductById = (prodcutId:number) => {
+ return  this._http.get('http://localhost:8081/api/Product/details?productId='+ prodcutId)
+   .map(product=> product.json())
+
  }
 }

@@ -18,6 +18,7 @@ import { AddProductModule } from './add-product/add-product.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { APP_BASE_HREF } from '@angular/common';
 import { ObserverModule } from './observer/observer.module';
+import { CollaseWellComponent } from './shared/collapse-well.component';
 
 
 

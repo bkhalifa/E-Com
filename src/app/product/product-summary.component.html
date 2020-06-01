@@ -10,8 +10,11 @@
 
 
     <p class="card-text">{{produit.description}}</p>
+
+
      <p> Prix : {{produit.unitCost}} €</p>
  <label class="laber-control" > Acheter </label>
  <input type='checkbox' class="checkbox-inline" (change)="addToPanier($event.target.checked, produit.productId)" />
+
   </div>
 </div>

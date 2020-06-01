@@ -10,6 +10,8 @@
 </div>
 
   <div *ngFor="let pr of produits | produitFilter:searchTerm">
+
+
     <div class="card">
       <div class="row">
 
@@ -20,18 +22,23 @@
       <div class="card-body">
         <h5 class="card-title"></h5>
         <h6 class="card-subtitle mb-2 text-muted">
-          <a  href="#">     {{pr.modelNumber}}   </a> | {{pr.modelName}}
-        </h6>
-        <span>
-          <img class="lib-img" [src]="pr.productImage!= '' ? '/resource/'+ pr.productImage : defaultImg " height="200" width="200">
+          <a [routerLink]="['/product-detail',pr.productId]">     {{pr.modelNumber}}   </a>
 
-        </span>
+        </h6>
+        <h3>  {{pr.modelName}}</h3>
+
 
         <p class="card-text">{{pr.description}}</p>
          <p> Prix : {{pr.unitCost}} €</p>
      <label class="laber-control" > Acheter </label>
      <input type='checkbox' class="checkbox-inline" (change)="addToPanier($event.target.checked, pr.productId)" />
+     <span>
+      <img class="lib-img" [src]="pr.productImage!= '' ? '/resource/'+ pr.productImage : defaultImg " height="200" width="200">
+
+    </span>
+
       </div>
+
     </div>
 
-
+    <router-outlet></router-outlet>
